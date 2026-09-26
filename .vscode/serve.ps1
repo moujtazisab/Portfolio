@@ -25,7 +25,7 @@ try {
 
             $relativePath = [System.Uri]::UnescapeDataString($context.Request.Url.AbsolutePath.TrimStart('/'))
             if ([string]::IsNullOrWhiteSpace($relativePath)) {
-                $relativePath = 'MainPage.html'
+                $relativePath = 'docs/MainPage.html'
             }
 
             $relativePath = $relativePath.Replace('/', [System.IO.Path]::DirectorySeparatorChar)
