@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug MainPage in Edge",
+            "type": "msedge",
+            "request": "launch",
+            "url": "http://127.0.0.1:5500/MainPage.html",
+            "webRoot": "${workspaceFolder}",
+            "runtimeExecutable": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+            "userDataDir": true,
+            "preLaunchTask": "Start SABER portfolio server",
+            "postDebugTask": "Stop SABER portfolio server"
+        }
+    ]
+}

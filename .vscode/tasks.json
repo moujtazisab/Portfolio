@@ -1,0 +1,44 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start SABER portfolio server",
+            "type": "shell",
+            "command": "powershell.exe",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-File",
+                "${workspaceFolder}\\.vscode\\serve.ps1"
+            ],
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "portfolio-server",
+                "pattern": [
+                    {
+                        "regexp": "^Portfolio server listening on http://127\\.0\\.0\\.1:5500$"
+                    }
+                ],
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Portfolio server listening on http://127\\.0\\.0\\.1:5500",
+                    "endsPattern": "Portfolio server stopped"
+                }
+            }
+        },
+        {
+            "label": "Stop SABER portfolio server",
+            "type": "shell",
+            "command": "powershell.exe",
+            "args": [
+                "-NoProfile",
+                "-ExecutionPolicy",
+                "Bypass",
+                "-Command",
+                "try { Invoke-WebRequest -Uri 'http://127.0.0.1:5500/__stop' -UseBasicParsing | Out-Null } catch { }"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

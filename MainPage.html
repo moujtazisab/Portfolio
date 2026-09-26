@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saber — Portfolio Professionnel & Compétences</title>
+    <title data-i18n="page-title">Saber — Portfolio Professionnel &amp; Compétences</title>
     <link rel="stylesheet" href="Style/css.css">
 </head>
 <body class="theme-dark">
-    <button id="themeToggle" class="theme-toggle" aria-label="Changer le thème">☀️ Mode clair</button>
+    <nav class="page-controls" aria-label="Préférences d'affichage">
+        <div class="language-toggle" role="group" aria-label="Choisir la langue">
+            <button type="button" class="language-button is-active" data-language="fr" aria-pressed="true">FR</button>
+            <button type="button" class="language-button" data-language="en" aria-pressed="false">EN</button>
+        </div>
+        <button id="themeToggle" class="theme-toggle" aria-label="Changer le thème">☀️ Mode clair</button>
+    </nav>
 
     <!-- En-tête / Hero Section -->
     <header class="hero">
         <div class="container hero-content">
             <div class="hero-photo-wrap">
-                <img src="Ressource/SaberPic.png" alt="Photo de Saber Moujtazi" class="hero-photo">
+                <img src="Ressource/SaberPic.png" alt="Photo de Saber Moujtazi" data-i18n="photo-alt" class="hero-photo">
             </div>
             <div class="hero-text">
                 <div class="hero-badges">
@@ -21,32 +27,43 @@
                     <span class="badge">.NET / Web</span>
                 </div>
                 <h1>Saber Moujtazi</h1>
-                <p class="subtitle">Développeur Web &amp; .NET Full Stack</p>
-                <p class="bio">Jeune professionnel passionné par l'informatique et le développement, avec une solide expérience dans la conception, le développement et la mise en œuvre de solutions logicielles avancées, de systèmes ERP complexes, d'applications POS et de sites web.</p>
+                <p class="subtitle" data-i18n="subtitle">Développeur Web &amp; .NET Full Stack</p>
+                <p class="bio" data-i18n="hero-bio">Jeune professionnel passionné par l'informatique et le développement, avec une solide expérience dans la conception, le développement et la mise en œuvre de solutions logicielles avancées, de systèmes ERP complexes, d'applications POS et de sites web.</p>
                 <div class="hero-actions">
-                    <a href="Pdf/Saber Moujtazi.pdf" class="btn" target="_blank" rel="noopener" download>Télécharger mon CV</a>
-                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                    <a href="Pdf/Saber Moujtazi.pdf" class="btn cv-download" data-cv-language="fr" download data-i18n="download-cv-fr">Télécharger le CV (FR)</a>
+                    <a href="Pdf/Saber Moujtazi EN.pdf" class="btn cv-download" data-cv-language="en" download data-i18n="download-cv-en" hidden>Download CV (EN)</a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="contact-me">Me contacter</a>
                 </div>
             </div>
         </div>
     </header>
 
     <section class="section container" id="contact">
-        <h2>Contact</h2>
+        <h2 data-i18n="contact-heading">Contact</h2>
         <div class="profile-box">
             <div class="info-grid">
-                <div><strong>Contact :</strong> +212 6 94 23 88 79</div>
-                <div><strong>Email :</strong> moujtazisab@gmail.com</div>
-                <div><strong>Adresse :</strong> Rahma, Casablanca</div>
-                <div><strong>Langues :</strong> Arabe (Natif), Français (Courant), Anglais (Professionnel)</div>
+                <div><strong data-i18n="phone-label">Contact :</strong> +212 6 94 23 88 79</div>
+                <div><strong>Email:</strong> moujtazisab@gmail.com</div>
+                <div><strong data-i18n="address-label">Adresse :</strong> Rahma, Casablanca</div>
+                <div><strong data-i18n="languages-label">Langues :</strong> <span data-i18n="languages">Arabe (Natif), Français (Courant), Anglais (Professionnel)</span></div>
+                <a href="https://www.linkedin.com/in/saber-moujtazi-aa4b84323/" class="contact-link linkedin-link" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn de Saber Moujtazi">
+                    <span class="linkedin-mark" aria-hidden="true">in</span>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/moujtazisab" class="contact-link github-link" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub de Saber Moujtazi">
+                    <svg class="github-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                    <span>GitHub</span>
+                </a>
             </div>
         </div>
     </section>
 
     <section class="section container">
-        <h2>Profil Professionnel</h2>
+        <h2 data-i18n="profile-heading">Profil Professionnel</h2>
         <div class="profile-box">
-            <p>
+            <p data-i18n="profile-copy">
                 Jeune professionnel passionné par l'informatique et le développement, avec une solide expérience dans la conception,
                 le développement et la mise en œuvre de solutions logicielles avancées, de systèmes ERP complexes,
                 d'applications POS et de sites web. Polyvalent, rigoureux et doté d'une forte capacité d'analyse,
@@ -57,87 +74,87 @@
     </section>
 
     <section class="section container">
-        <h2>Expériences Professionnelles</h2>
+        <h2 data-i18n="experience-heading">Expériences Professionnelles</h2>
 
         <div class="experience-item">
-            <h3>Développeur .NET Full Stack | DigiScreen (Maroc)</h3>
-            <span class="date">Depuis le 17 avril 2025</span>
+            <h3 data-i18n="job-digi-title">Développeur .NET Full Stack | DigiScreen (Maroc)</h3>
+            <span class="date" data-i18n="job-digi-date">Depuis le 17 avril 2025</span>
             <ul>
-                <li>Conception, développement et maintenance d'applications .NET Full Stack hautement performantes dédiées aux solutions de caisse (POS) et à la gestion centralisée des commandes.</li>
-                <li>Participation active à la migration d'une application POS de Xamarin vers .NET MAUI, avec refonte complète et modernisation de l'architecture.</li>
-                <li>Contribution technique à la finalisation et à l'intégration de Deliveroo avec les systèmes de caisse, incluant la gestion robuste des APIs et du flux des commandes.</li>
-                <li>Développement et mise en place d'une intégration complète d'Uber Eats avec le système de caisse pour automatiser la récupération, le suivi et la gestion des commandes en temps réel.</li>
-                <li>Conception et développement d'un Dashboard Cloud centralisé pour le suivi, l'analyse et l'exploitation approfondie des données opérationnelles.</li>
-                <li>Utilisation intensive de Microsoft Azure pour le stockage sécurisé, la gestion et l'exploitation des données dans le cloud.</li>
-                <li>Migration réussie du système KDS (Kitchen Display System) de Xamarin vers une architecture cloud moderne.</li>
-                <li>Développement d'un dashboard dédié aux livreurs permettant de consulter, suivre et gérer efficacement les tournées et commandes.</li>
-                <li>Conception, développement et intégration d'APIs REST robustes pour assurer une communication fluide et sécurisée entre les applications.</li>
-                <li>Utilisation experte d'Entity Framework / Entity Framework Core pour l'accès et la gestion des données relationnelles.</li>
-                <li>Intégration de composants visuels avancés via DevExpress et Syncfusion pour des interfaces utilisateur riches et ergonomiques.</li>
-                <li>Mise en œuvre des meilleures pratiques DevOps en utilisant GitHub, Jenkins et Portainer pour l'intégration et le déploiement continus.</li>
+                <li data-i18n="job-digi-1">Conception, développement et maintenance d'applications .NET Full Stack hautement performantes dédiées aux solutions de caisse (POS) et à la gestion centralisée des commandes.</li>
+                <li data-i18n="job-digi-2">Participation active à la migration d'une application POS de Xamarin vers .NET MAUI, avec refonte complète et modernisation de l'architecture.</li>
+                <li data-i18n="job-digi-3">Contribution technique à la finalisation et à l'intégration de Deliveroo avec les systèmes de caisse, incluant la gestion robuste des APIs et du flux des commandes.</li>
+                <li data-i18n="job-digi-4">Développement et mise en place d'une intégration complète d'Uber Eats avec le système de caisse pour automatiser la récupération, le suivi et la gestion des commandes en temps réel.</li>
+                <li data-i18n="job-digi-5">Conception et développement d'un Dashboard Cloud centralisé pour le suivi, l'analyse et l'exploitation approfondie des données opérationnelles.</li>
+                <li data-i18n="job-digi-6">Utilisation intensive de Microsoft Azure pour le stockage sécurisé, la gestion et l'exploitation des données dans le cloud.</li>
+                <li data-i18n="job-digi-7">Migration réussie du système KDS (Kitchen Display System) de Xamarin vers une architecture cloud moderne.</li>
+                <li data-i18n="job-digi-8">Développement d'un dashboard dédié aux livreurs permettant de consulter, suivre et gérer efficacement les tournées et commandes.</li>
+                <li data-i18n="job-digi-9">Conception, développement et intégration d'APIs REST robustes pour assurer une communication fluide et sécurisée entre les applications.</li>
+                <li data-i18n="job-digi-10">Utilisation experte d'Entity Framework / Entity Framework Core pour l'accès et la gestion des données relationnelles.</li>
+                <li data-i18n="job-digi-11">Intégration de composants visuels avancés via DevExpress et Syncfusion pour des interfaces utilisateur riches et ergonomiques.</li>
+                <li data-i18n="job-digi-12">Mise en œuvre des meilleures pratiques DevOps en utilisant GitHub, Jenkins et Portainer pour l'intégration et le déploiement continus.</li>
             </ul>
         </div>
 
         <div class="experience-item">
-            <h3>Développeur | EasySoft</h3>
+            <h3 data-i18n="job-easy-title">Développeur | EasySoft</h3>
             <span class="date">15/07/2024 - 04/02/2025</span>
             <ul>
-                <li>Conception, développement et personnalisation complète d'un système ERP robuste basé sur C# .NET.</li>
-                <li>Gestion rigoureuse, optimisation et maintenance des bases de données relationnelles.</li>
-                <li>Rédaction de requêtes complexes, procédures stockées et création d'états dynamiques et sur mesure dans SAP.</li>
-                <li>Assistance technique de premier niveau et accompagnement personnalisé des clients via formations et documentation.</li>
-                <li>Collaboration étroite avec les équipes fonctionnelles pour analyser les besoins métiers et traduire les exigences en solutions performantes.</li>
+                <li data-i18n="job-easy-1">Conception, développement et personnalisation complète d'un système ERP robuste basé sur C# .NET.</li>
+                <li data-i18n="job-easy-2">Gestion rigoureuse, optimisation et maintenance des bases de données relationnelles.</li>
+                <li data-i18n="job-easy-3">Rédaction de requêtes complexes, procédures stockées et création d'états dynamiques et sur mesure dans SAP.</li>
+                <li data-i18n="job-easy-4">Assistance technique de premier niveau et accompagnement personnalisé des clients via formations et documentation.</li>
+                <li data-i18n="job-easy-5">Collaboration étroite avec les équipes fonctionnelles pour analyser les besoins métiers et traduire les exigences en solutions performantes.</li>
             </ul>
         </div>
 
         <div class="experience-item">
-            <h3>Développeur et Designer | First Mark</h3>
+            <h3 data-i18n="job-first-title">Développeur et Designer | First Mark</h3>
             <span class="date">01/01/2024 - 30/04/2024</span>
             <ul>
-                <li>Construction, développement et optimisation d'un site web e-commerce complet et responsive.</li>
-                <li>Gestion de contenu dynamique, intégration des catalogues produits et amélioration de l'expérience utilisateur (UX/UI).</li>
-                <li>Conception, lancement, suivi et optimisation de campagnes publicitaires ciblées sur Meta et TikTok.</li>
+                <li data-i18n="job-first-1">Construction, développement et optimisation d'un site web e-commerce complet et responsive.</li>
+                <li data-i18n="job-first-2">Gestion de contenu dynamique, intégration des catalogues produits et amélioration de l'expérience utilisateur (UX/UI).</li>
+                <li data-i18n="job-first-3">Conception, lancement, suivi et optimisation de campagnes publicitaires ciblées sur Meta et TikTok.</li>
             </ul>
         </div>
 
         <div class="experience-item">
-            <h3>Développeur et Designer | Gadgeyo</h3>
+            <h3 data-i18n="job-gadgeyo-title">Développeur et Designer | Gadgeyo</h3>
             <span class="date">01/09/2023 - 31/12/2023</span>
             <ul>
-                <li>Construction et paramétrage d'un site web e-commerce de A à Z.</li>
-                <li>Intégration et mise à jour de produits, recherche et optimisation des médias visuels et publicitaires.</li>
-                <li>Gestion globale du contenu et pilotage de campagnes marketing et publicitaires sur Meta et TikTok.</li>
+                <li data-i18n="job-gadgeyo-1">Construction et paramétrage d'un site web e-commerce de A à Z.</li>
+                <li data-i18n="job-gadgeyo-2">Intégration et mise à jour de produits, recherche et optimisation des médias visuels et publicitaires.</li>
+                <li data-i18n="job-gadgeyo-3">Gestion globale du contenu et pilotage de campagnes marketing et publicitaires sur Meta et TikTok.</li>
             </ul>
         </div>
 
         <div class="experience-item">
-            <h3>Stagiaire - Designer | 2MAG Agence Digitale</h3>
+            <h3 data-i18n="job-2mag-title">Stagiaire - Designer | 2MAG Agence Digitale</h3>
             <span class="date">01/06/2023 - 30/07/2023</span>
             <ul>
-                <li>Création de visuels et d'images de marque pour divers clients (supports digitaux et imprimés).</li>
-                <li>Conception de logotypes et participation active aux stratégies de branding.</li>
-                <li>Implication directe sur les projets phares de l'agence, notamment « Ligno » et « Uper Ceramic ».</li>
+                <li data-i18n="job-2mag-1">Création de visuels et d'images de marque pour divers clients (supports digitaux et imprimés).</li>
+                <li data-i18n="job-2mag-2">Conception de logotypes et participation active aux stratégies de branding.</li>
+                <li data-i18n="job-2mag-3">Implication directe sur les projets phares de l'agence, notamment « Ligno » et « Uper Ceramic ».</li>
             </ul>
         </div>
     </section>
 
     <section class="section container">
-        <h2>Formation</h2>
+        <h2 data-i18n="education-heading">Formation</h2>
         <div class="two-column">
             <div class="mini-card">
-                <h3>Formations Spécialisées</h3>
+                <h3 data-i18n="education-specialized-title">Formations Spécialisées</h3>
                 <ul>
-                    <li>Udemy — acquisition et perfectionnement pratique en développement logiciel et design numérique.</li>
+                    <li data-i18n="education-specialized">Udemy — acquisition et perfectionnement pratique en développement logiciel et design numérique.</li>
                 </ul>
             </div>
             <div class="mini-card">
                 <h3>BTS</h3>
                 <ul>
-                    <li>2020 - 2022 — spécialisation en conception, administration et gestion des systèmes informatiques et des réseaux.</li>
+                    <li data-i18n="education-bts">2020 - 2022 — spécialisation en conception, administration et gestion des systèmes informatiques et des réseaux.</li>
                 </ul>
             </div>
             <div class="mini-card">
-                <h3>Baccalauréat Scientifique</h3>
+                <h3 data-i18n="education-bachelor-title">Baccalauréat Scientifique</h3>
                 <ul>
                     <li>2019 - 2020 — Jaber Ibn Hayyan</li>
                 </ul>
@@ -146,7 +163,7 @@
     </section>
 
     <section class="section container">
-        <h2>Compétences Techniques</h2>
+        <h2 data-i18n="skills-heading">Compétences Techniques</h2>
         <div class="skills-grid">
             <div class="skill-card">
                 <h3>Front-End &amp; Web</h3>
@@ -155,28 +172,30 @@
                     <li>HTML5</li>
                     <li>CSS3</li>
                     <li>JavaScript</li>
+                    <li>React</li>
                 </ul>
             </div>
             <div class="skill-card">
-                <h3>Back-End &amp; Développement</h3>
+                <h3 data-i18n="skill-backend">Back-End &amp; Développement</h3>
                 <ul>
                     <li>C#</li>
+                    <li>C</li>
                     <li>Java</li>
                     <li>PHP</li>
                     <li>.NET 6, .NET 8, .NET 10</li>
                 </ul>
             </div>
             <div class="skill-card">
-                <h3>API &amp; Bases de données</h3>
+                <h3 data-i18n="skill-databases">API &amp; Bases de données</h3>
                 <ul>
                     <li>REST API</li>
                     <li>Entity Framework / EF Core</li>
                     <li>MySQL</li>
-                    <li>Gestion de bases de données</li>
+                    <li data-i18n="skill-db-management">Gestion de bases de données</li>
                 </ul>
             </div>
             <div class="skill-card">
-                <h3>Frameworks &amp; Outils</h3>
+                <h3 data-i18n="skill-frameworks">Frameworks &amp; Outils</h3>
                 <ul>
                     <li>.NET MAUI</li>
                     <li>Xamarin</li>
@@ -195,7 +214,7 @@
                 </ul>
             </div>
             <div class="skill-card">
-                <h3>Design &amp; Multimédia</h3>
+                <h3 data-i18n="skill-design">Design &amp; Multimédia</h3>
                 <ul>
                     <li>Adobe Photoshop</li>
                     <li>Adobe Illustrator</li>
@@ -207,59 +226,242 @@
     </section>
 
     <section class="section container">
-        <h2>Compétences Personnelles</h2>
+        <h2 data-i18n="soft-skills-heading">Compétences Personnelles</h2>
         <div class="profile-box">
             <ul class="personal-list">
-                <li>Travail d'équipe &amp; Communication efficace</li>
-                <li>Gestion du temps, rigueur et sens des responsabilités</li>
+                <li data-i18n="soft-skill-1">Travail d'équipe &amp; Communication efficace</li>
+                <li data-i18n="soft-skill-2">Gestion du temps, rigueur et sens des responsabilités</li>
             </ul>
         </div>
     </section>
 
     <section class="section container">
-        <h2>Portfolio GitHub</h2>
+        <h2 data-i18n="portfolio-heading">Portfolio GitHub</h2>
         <div class="project-grid">
 
             <article class="project-card">
-                <span class="project-tag">Dashboard</span>
-                <h3>Dashboard en ligne</h3>
-                <p>Tableau de bord centralisé pour suivre les ventes, les statistiques, les performances et les données métiers.</p>
-                <a href="#" class="project-link">Voir le projet</a>
+                <span class="project-tag">.NET MAUI</span>
+                <h3 data-i18n="project-gym-title">Application de gestion de salle de sport</h3>
+                <p data-i18n="project-gym-copy">Application C# .NET MAUI pour la gestion d’une salle de sport.</p>
+                <div class="project-links">
+                    <a href="https://github.com/moujtazisab/Nexus-Gym-Backend" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="backend-repo">Backend</a>
+                </div>
             </article>
 
             <article class="project-card">
-                <span class="project-tag">Gestion</span>
-                <h3>Gestion de salle web</h3>
-                <p>Application web de gestion de salle avec suivi des opérations, gestion des ressources et supervision en temps réel.</p>
-                <a href="#" class="project-link">Voir le projet</a>
+                <span class="project-tag" data-i18n="project-ecommerce-tag">E-commerce</span>
+                <h3 data-i18n="project-ecommerce-title">Site e-commerce et tableau de bord</h3>
+                <p data-i18n="project-ecommerce-copy">Site e-commerce avec un tableau de bord de gestion et des pages Razor dédiées au manager.</p>
+                <div class="project-links">
+                    <a href="https://github.com/moujtazisab/NexusStore-Backend" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="backend-repo">Backend</a>
+                    <a href="https://github.com/moujtazisab/NexusStore-Frontend" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="frontend-repo">Frontend</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <span class="project-tag">React + REST API</span>
+                <h3 data-i18n="project-trip-title">Application de planification de voyages</h3>
+                <p data-i18n="project-trip-copy">Application React connectée à une API REST pour organiser et planifier des voyages.</p>
+                <div class="project-links">
+                    <a href="https://github.com/moujtazisab/NexusTrip-Backend" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="backend-repo">Backend</a>
+                    <a href="https://github.com/moujtazisab/NexusTrip-Frontend" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="frontend-repo">Frontend</a>
+                </div>
             </article>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <h2>Contactez-moi</h2>
-            <p>Discutons de vos projets en développement, .NET, design digital ou support technique.</p>
-            <a href="mailto:moujtazisab@gmail.com" class="btn">Envoyer un Email</a>
+            <h2 data-i18n="footer-heading">Contactez-moi</h2>
+            <p data-i18n="footer-copy">Discutons de vos projets en développement, .NET, design digital ou support technique.</p>
+            <a href="mailto:moujtazisab@gmail.com" class="btn" data-i18n="send-email">Envoyer un Email</a>
         </div>
     </footer>
 
     <footer class="page-footer">
         <div class="container">
-            <p>Created by SaberMoujtazi</p>
+            <p data-i18n="credit">Created by SaberMoujtazi</p>
         </div>
     </footer>
 
     <script>
         const toggleButton = document.getElementById('themeToggle');
         const body = document.body;
+        const languageButtons = document.querySelectorAll('.language-button');
+        const translations = {
+            fr: {
+                'page-title': 'Saber — Portfolio Professionnel & Compétences',
+                'photo-alt': 'Photo de Saber Moujtazi',
+                'subtitle': 'Développeur Web & .NET Full Stack',
+                'hero-bio': "Jeune professionnel passionné par l'informatique et le développement, avec une solide expérience dans la conception, le développement et la mise en œuvre de solutions logicielles avancées, de systèmes ERP complexes, d'applications POS et de sites web.",
+                'download-cv-fr': 'Télécharger le CV français', 'download-cv-en': 'Télécharger le CV anglais',
+                'contact-me': 'Me contacter',
+                'contact-heading': 'Contact', 'phone-label': 'Contact :', 'address-label': 'Adresse :',
+                'languages-label': 'Langues :', 'languages': 'Arabe (Natif), Français (Courant), Anglais (Professionnel)',
+                'profile-heading': 'Profil Professionnel',
+                'profile-copy': 'Jeune professionnel passionné par l’informatique et le développement, avec une solide expérience dans la conception, le développement et la mise en œuvre de solutions logicielles avancées, de systèmes ERP complexes, d’applications POS et de sites web. Polyvalent, rigoureux et doté d’une forte capacité d’analyse, je maîtrise un large éventail de technologies allant du .NET et des architectures cloud aux environnements front-end et design graphique.',
+                'experience-heading': 'Expériences Professionnelles',
+                'job-digi-title': 'Développeur .NET Full Stack | DigiScreen (Maroc)', 'job-digi-date': 'Depuis le 17 avril 2025',
+                'job-digi-1': 'Conception, développement et maintenance d’applications .NET Full Stack hautement performantes dédiées aux solutions de caisse (POS) et à la gestion centralisée des commandes.',
+                'job-digi-2': 'Participation active à la migration d’une application POS de Xamarin vers .NET MAUI, avec refonte complète et modernisation de l’architecture.',
+                'job-digi-3': 'Contribution technique à la finalisation et à l’intégration de Deliveroo avec les systèmes de caisse, incluant la gestion robuste des APIs et du flux des commandes.',
+                'job-digi-4': 'Développement et mise en place d’une intégration complète d’Uber Eats avec le système de caisse pour automatiser la récupération, le suivi et la gestion des commandes en temps réel.',
+                'job-digi-5': 'Conception et développement d’un Dashboard Cloud centralisé pour le suivi, l’analyse et l’exploitation approfondie des données opérationnelles.',
+                'job-digi-6': 'Utilisation intensive de Microsoft Azure pour le stockage sécurisé, la gestion et l’exploitation des données dans le cloud.',
+                'job-digi-7': 'Migration réussie du système KDS (Kitchen Display System) de Xamarin vers une architecture cloud moderne.',
+                'job-digi-8': 'Développement d’un dashboard dédié aux livreurs permettant de consulter, suivre et gérer efficacement les tournées et commandes.',
+                'job-digi-9': 'Conception, développement et intégration d’APIs REST robustes pour assurer une communication fluide et sécurisée entre les applications.',
+                'job-digi-10': 'Utilisation experte d’Entity Framework / Entity Framework Core pour l’accès et la gestion des données relationnelles.',
+                'job-digi-11': 'Intégration de composants visuels avancés via DevExpress et Syncfusion pour des interfaces utilisateur riches et ergonomiques.',
+                'job-digi-12': 'Mise en œuvre des meilleures pratiques DevOps en utilisant GitHub, Jenkins et Portainer pour l’intégration et le déploiement continus.',
+                'job-easy-title': 'Développeur | EasySoft',
+                'job-easy-1': 'Conception et personnalisation d’un ERP robuste en C#/.NET, en adaptant ses fonctionnalités aux besoins des clients.',
+                'job-easy-2': 'Gestion, optimisation et maintenance des bases de données relationnelles utilisées par l’ERP.',
+                'job-easy-3': 'Écriture de requêtes complexes et de procédures stockées, puis création d’états dynamiques et personnalisés dans SAP.',
+                'job-easy-4': 'Support technique de premier niveau, formation des utilisateurs et rédaction de documentation adaptée.',
+                'job-easy-5': 'Travail avec les équipes fonctionnelles pour analyser les besoins métiers et transformer les exigences en solutions logicielles adaptées.',
+                'job-first-title': 'Développeur et Designer | First Mark',
+                'job-first-1': 'Développement et optimisation d’un site e-commerce responsive, de sa structure jusqu’aux parcours de navigation.',
+                'job-first-2': 'Gestion des contenus dynamiques et intégration des catalogues produits, avec une attention portée à l’expérience UX/UI.',
+                'job-first-3': 'Conception, lancement, suivi et optimisation de campagnes publicitaires ciblées sur Meta et TikTok.',
+                'job-gadgeyo-title': 'Développeur et Designer | Gadgeyo',
+                'job-gadgeyo-1': 'Création et configuration d’un site e-commerce de bout en bout.',
+                'job-gadgeyo-2': 'Ajout et mise à jour des produits, sélection et optimisation des visuels et contenus publicitaires.',
+                'job-gadgeyo-3': 'Gestion du contenu du site et suivi des campagnes marketing et publicitaires sur Meta et TikTok.',
+                'job-2mag-title': 'Stagiaire - Designer | 2MAG Agence Digitale',
+                'job-2mag-1': 'Création de visuels et d’identités de marque pour plusieurs clients, pour leurs supports digitaux et imprimés.',
+                'job-2mag-2': 'Conception de logos et contribution aux stratégies de branding de l’agence.',
+                'job-2mag-3': 'Participation aux projets phares de l’agence, dont « Ligno » et « Uper Ceramic ».',
+                'education-heading': 'Formation', 'education-specialized-title': 'Formations Spécialisées',
+                'education-specialized': 'Udemy — acquisition et perfectionnement pratique en développement logiciel et design numérique.',
+                'education-bachelor-title': 'Baccalauréat Scientifique',
+                'education-bts': '2020 - 2022 — spécialisation en conception, administration et gestion des systèmes informatiques et des réseaux.',
+                'skills-heading': 'Compétences Techniques', 'skill-backend': 'Back-End & Développement',
+                'skill-databases': 'API & Bases de données', 'skill-db-management': 'Gestion de bases de données',
+                'skill-frameworks': 'Frameworks & Outils', 'skill-design': 'Design & Multimédia',
+                'soft-skills-heading': 'Compétences Personnelles',
+                'soft-skill-1': 'Travail d’équipe & Communication efficace',
+                'soft-skill-2': 'Gestion du temps, rigueur et sens des responsabilités',
+                'portfolio-heading': 'Portfolio GitHub',
+                'project-gym-title': 'Application de gestion de salle de sport',
+                'project-gym-copy': 'Application C# .NET MAUI pour la gestion d’une salle de sport.',
+                'project-ecommerce-tag': 'E-commerce',
+                'project-ecommerce-title': 'Site e-commerce et tableau de bord',
+                'project-ecommerce-copy': 'Site e-commerce avec un tableau de bord de gestion et des pages Razor dédiées au manager.',
+                'project-trip-title': 'Application de planification de voyages',
+                'project-trip-copy': 'Application React connectée à une API REST pour organiser et planifier des voyages.',
+                'backend-repo': 'Backend', 'frontend-repo': 'Frontend',
+                'footer-heading': 'Contactez-moi',
+                'footer-copy': 'Discutons de vos projets en développement, .NET, design digital ou support technique.',
+                'send-email': 'Envoyer un Email', 'credit': 'Created by SaberMoujtazi'
+            },
+            en: {
+                'page-title': 'Saber — Professional Portfolio & Skills',
+                'photo-alt': 'Photo of Saber Moujtazi',
+                'subtitle': 'Full Stack Web & .NET Developer',
+                'hero-bio': 'A young professional passionate about IT and software development, with solid experience designing, developing, and delivering advanced software solutions, complex ERP systems, POS applications, and websites.',
+                'download-cv-fr': 'Download French CV', 'download-cv-en': 'Download English CV',
+                'contact-me': 'Contact me',
+                'contact-heading': 'Contact', 'phone-label': 'Phone:', 'address-label': 'Location:',
+                'languages-label': 'Languages:', 'languages': 'Arabic (Native), French (Fluent), English (Professional)',
+                'profile-heading': 'Professional Profile',
+                'profile-copy': 'A young professional passionate about IT and software development, with solid experience designing, developing, and delivering advanced software solutions, complex ERP systems, POS applications, and websites. Versatile, thorough, and analytical, I work across a broad range of technologies, from .NET and cloud architectures to front-end development and graphic design.',
+                'experience-heading': 'Professional Experience',
+                'job-digi-title': '.NET Full Stack Developer | DigiScreen (Morocco)', 'job-digi-date': 'Since April 17, 2025',
+                'job-digi-1': 'Designed, developed, and maintained high-performance .NET Full Stack applications for point-of-sale (POS) solutions and centralized order management.',
+                'job-digi-2': 'Played an active role in migrating a POS application from Xamarin to .NET MAUI, including a complete redesign and modernization of the architecture.',
+                'job-digi-3': 'Contributed to completing and integrating Deliveroo with POS systems, including robust API and order-flow management.',
+                'job-digi-4': 'Developed a complete Uber Eats integration with the POS system to automate real-time order retrieval, tracking, and management.',
+                'job-digi-5': 'Designed and developed a centralized cloud dashboard for monitoring, analyzing, and exploring operational data.',
+                'job-digi-6': 'Used Microsoft Azure extensively for secure cloud data storage, management, and processing.',
+                'job-digi-7': 'Successfully migrated the KDS (Kitchen Display System) from Xamarin to a modern cloud architecture.',
+                'job-digi-8': 'Developed a delivery dashboard for efficiently viewing, tracking, and managing routes and orders.',
+                'job-digi-9': 'Designed, developed, and integrated robust REST APIs to enable smooth, secure communication between applications.',
+                'job-digi-10': 'Used Entity Framework / Entity Framework Core for relational data access and management.',
+                'job-digi-11': 'Integrated advanced DevExpress and Syncfusion components to create rich, user-friendly interfaces.',
+                'job-digi-12': 'Applied DevOps best practices with GitHub, Jenkins, and Portainer for continuous integration and deployment.',
+                'job-easy-title': 'Developer | EasySoft',
+                'job-easy-1': 'Designed and customized a robust C#/.NET ERP system, adapting its features to customer needs.',
+                'job-easy-2': 'Managed, optimized, and maintained the relational databases used by the ERP system.',
+                'job-easy-3': 'Wrote complex queries and stored procedures, and created dynamic, custom SAP reports.',
+                'job-easy-4': 'Provided first-line technical support, user training, and clear supporting documentation.',
+                'job-easy-5': 'Worked with functional teams to analyze business needs and translate requirements into suitable software solutions.',
+                'job-first-title': 'Developer & Designer | First Mark',
+                'job-first-1': 'Developed and optimized a responsive e-commerce website, from its structure through its browsing flows.',
+                'job-first-2': 'Managed dynamic content and integrated product catalogs, with a focus on the UX/UI experience.',
+                'job-first-3': 'Designed, launched, monitored, and optimized targeted advertising campaigns on Meta and TikTok.',
+                'job-gadgeyo-title': 'Developer & Designer | Gadgeyo',
+                'job-gadgeyo-1': 'Created and configured an e-commerce website from start to finish.',
+                'job-gadgeyo-2': 'Added and updated products, selected visual assets, and optimized advertising content.',
+                'job-gadgeyo-3': 'Managed website content and monitored marketing and advertising campaigns on Meta and TikTok.',
+                'job-2mag-title': 'Design Intern | 2MAG Digital Agency',
+                'job-2mag-1': 'Created visuals and brand identities for multiple clients across digital and print media.',
+                'job-2mag-2': 'Designed logos and contributed to the agency’s branding strategies.',
+                'job-2mag-3': 'Contributed to the agency’s flagship projects, including “Ligno” and “Uper Ceramic”.',
+                'education-heading': 'Education', 'education-specialized-title': 'Specialized Training',
+                'education-specialized': 'Udemy — hands-on learning and development in software development and digital design.',
+                'education-bachelor-title': 'Scientific Baccalaureate',
+                'education-bts': '2020 - 2022 — specialized in the design, administration, and management of computer systems and networks.',
+                'skills-heading': 'Technical Skills', 'skill-backend': 'Back-End & Development',
+                'skill-databases': 'APIs & Databases', 'skill-db-management': 'Database management',
+                'skill-frameworks': 'Frameworks & Tools', 'skill-design': 'Design & Multimedia',
+                'soft-skills-heading': 'Personal Skills',
+                'soft-skill-1': 'Teamwork & effective communication',
+                'soft-skill-2': 'Time management, attention to detail, and accountability',
+                'portfolio-heading': 'GitHub Portfolio',
+                'project-gym-title': 'Gym Management Application',
+                'project-gym-copy': 'A C# .NET MAUI application for gym management.',
+                'project-ecommerce-tag': 'E-commerce',
+                'project-ecommerce-title': 'E-commerce Website and Dashboard',
+                'project-ecommerce-copy': 'An e-commerce website with a management dashboard and Razor Pages for managers.',
+                'project-trip-title': 'Trip Planning Application',
+                'project-trip-copy': 'A React application connected to a REST API for organizing and planning trips.',
+                'backend-repo': 'Backend', 'frontend-repo': 'Frontend',
+                'footer-heading': 'Get in Touch',
+                'footer-copy': 'Let’s discuss your development, .NET, digital design, or technical support projects.',
+                'send-email': 'Send an Email', 'credit': 'Created by SaberMoujtazi'
+            }
+        };
+
+        const applyLanguage = (language) => {
+            document.documentElement.lang = language;
+            document.querySelector('.page-controls').setAttribute('aria-label', language === 'fr' ? 'Préférences d’affichage' : 'Display preferences');
+            document.querySelector('.language-toggle').setAttribute('aria-label', language === 'fr' ? 'Choisir la langue' : 'Choose language');
+            document.querySelectorAll('.cv-download').forEach((link) => {
+                link.hidden = link.dataset.cvLanguage !== language;
+            });
+            document.querySelector('.linkedin-link').setAttribute('aria-label', language === 'fr' ? 'Profil LinkedIn de Saber Moujtazi' : 'Saber Moujtazi’s LinkedIn profile');
+            document.querySelector('.github-link').setAttribute('aria-label', language === 'fr' ? 'Profil GitHub de Saber Moujtazi' : 'Saber Moujtazi’s GitHub profile');
+            document.querySelectorAll('[data-i18n]').forEach((element) => {
+                const translation = translations[language][element.dataset.i18n];
+                if (translation) {
+                    if (element.hasAttribute('alt')) {
+                        element.alt = translation;
+                    } else {
+                        element.textContent = translation;
+                    }
+                }
+            });
+            languageButtons.forEach((button) => {
+                const isActive = button.dataset.language === language;
+                button.classList.toggle('is-active', isActive);
+                button.setAttribute('aria-pressed', String(isActive));
+            });
+            localStorage.setItem('language', language);
+            applyTheme(body.classList.contains('theme-dark') ? 'dark' : 'light');
+        };
 
         const applyTheme = (theme) => {
             const isDark = theme === 'dark';
             body.classList.toggle('theme-dark', isDark);
             body.classList.toggle('theme-light', !isDark);
-            toggleButton.textContent = isDark ? '☀️ Mode clair' : '🌙 Mode sombre';
-            toggleButton.setAttribute('aria-label', isDark ? 'Passer en mode clair' : 'Passer en mode sombre');
+            const language = document.documentElement.lang;
+            toggleButton.textContent = isDark
+                ? (language === 'fr' ? '☀️ Mode clair' : '☀️ Light mode')
+                : (language === 'fr' ? '🌙 Mode sombre' : '🌙 Dark mode');
+            toggleButton.setAttribute('aria-label', isDark
+                ? (language === 'fr' ? 'Passer en mode clair' : 'Switch to light mode')
+                : (language === 'fr' ? 'Passer en mode sombre' : 'Switch to dark mode'));
         };
 
         const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -270,6 +472,12 @@
             localStorage.setItem('theme', nextTheme);
             applyTheme(nextTheme);
         });
+
+        languageButtons.forEach((button) => {
+            button.addEventListener('click', () => applyLanguage(button.dataset.language));
+        });
+
+        applyLanguage(localStorage.getItem('language') || 'fr');
     </script>
 
 </body>

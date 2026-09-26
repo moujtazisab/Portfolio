@@ -35,6 +35,7 @@ body.theme-light {
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 72px;
 }
 
 body {
@@ -55,17 +56,77 @@ body {
     }
 }
 
+p {
+    animation: paragraphReveal 650ms ease both;
+}
+
+@keyframes paragraphReveal {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.theme-toggle {
+.page-controls {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    inset: 0 0 auto;
     z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    padding: 7px max(16px, calc((100vw - 1100px) / 2 + 20px));
+    border-bottom: 1px solid var(--border);
+    background: rgba(11, 16, 32, 0.96);
+    box-shadow: 0 8px 24px var(--shadow);
+    backdrop-filter: blur(10px);
+}
+
+.language-toggle {
+    display: inline-flex;
+    padding: 4px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.25);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 20px var(--shadow);
+}
+
+.language-button {
+    min-width: 38px;
+    min-height: 34px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-main);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.language-button.is-active {
+    background: var(--accent);
+    color: #0f172a;
+}
+
+.language-button:focus-visible {
+    outline: 2px solid var(--accent-strong);
+    outline-offset: 2px;
+}
+
+.theme-toggle {
     border: 1px solid var(--border);
     background: rgba(15, 23, 42, 0.25);
     color: var(--text-main);
@@ -95,6 +156,14 @@ body {
 
 body.theme-light .theme-toggle {
     background: rgba(255,255,255,0.8);
+}
+
+body.theme-light .language-toggle {
+    background: rgba(255,255,255,0.8);
+}
+
+body.theme-light .page-controls {
+    background: rgba(243, 247, 251, 0.96);
 }
 
 /* En-tête */
@@ -235,7 +304,7 @@ body.theme-light .btn-secondary:hover {
 }
 
 .section h2 {
-    margin-bottom: 35px;
+    margin-bottom: 44px;
     font-size: 2rem;
     color: var(--text-main);
     border-bottom: 3px solid var(--accent);
@@ -291,9 +360,10 @@ body.theme-light .btn-secondary:hover {
 }
 
 .project-card h3 {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     color: var(--text-main);
     font-size: 1.3rem;
+    line-height: 1.4;
 }
 
 .project-card p {
@@ -394,6 +464,43 @@ body.theme-light .btn-secondary:hover {
     color: var(--text-main);
 }
 
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    color: var(--text-main);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: var(--accent);
+}
+
+.linkedin-mark {
+    display: inline-grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    background: #0a66c2;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.github-mark {
+    width: 25px;
+    height: 25px;
+    color: var(--text-main);
+}
+
+.hero-actions .cv-download[hidden] {
+    display: none;
+}
+
 .personal-list {
     list-style: disc;
     padding-left: 22px;
@@ -432,6 +539,8 @@ body.theme-light .btn-secondary:hover {
 .experience-item h3 {
     font-size: 1.3rem;
     color: var(--text-main);
+    line-height: 1.4;
+    margin-bottom: 8px;
 }
 
 .experience-item .date {
@@ -519,10 +628,21 @@ body.theme-light .page-footer {
     outline-offset: 2px;
 }
 
+.hero-actions .btn-secondary {
+    color: #fff;
+}
+
+body.theme-light .hero-actions .btn-secondary {
+    color: #0f172a;
+}
+
 @media (max-width: 768px) {
+    .page-controls {
+        gap: 6px;
+        padding: 6px 12px;
+    }
+
     .theme-toggle {
-        top: 12px;
-        right: 12px;
         padding: 8px 12px;
         font-size: 0.85rem;
     }
@@ -588,10 +708,16 @@ body.theme-light .page-footer {
 
     .section h2 {
         font-size: 1.4rem;
-        margin-bottom: 22px;
+        margin-bottom: 40px;
     }
 
     .info-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    p {
+        animation: none;
     }
 }
